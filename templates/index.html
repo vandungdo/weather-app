@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <div>
+        <form action="{{url_for('home')}}", method="POST">
+            <input type="text" name="city">
+            <input type="submit" name="submit" value="enter">
+        </form>
+    </div>
+    <div>
+        <p style="font-size: 30;text-align: center;">
+            <strong style="font-size: 30;text-align: center;">City: </strong><span style="font-size: 30;text-align: center;">{{ weather.City }}</span>
+            <br><br>
+            <strong style="font-size: 30;text-align: center;">Location: </strong><span>{{ weather.Location }}</span>
+            <br><br>
+            <strong style="font-size: 30;text-align: center;">Weather: </strong><span>{{ weather.Main_weather }}</span>
+            <br><br>
+            <strong style="font-size: 30;text-align: center;">Weather in detail: </strong><span>{{ weather.Description_weather }}</span>
+            <br><br>
+            <strong style="font-size: 30;text-align: center;">Temperatur: </strong><span>{{ weather.Temperatur }}</span>
+            <br><br>
+            <strong style="font-size: 30;text-align: center;">Feel like: </strong><span>{{ weather.Feels_like }}</span>
+            <br><br>
+            <strong style="font-size: 30;text-align: center;">Min temperatur: </strong><span>{{ weather.Temp_min }}</span>
+            <br><br>
+            <strong style="font-size: 30;text-align: center;">Max temperatur: </strong><span>{{ weather.Temp_max }}</span>
+            <br><br>
+            <strong style="font-size: 30;text-align: center;">Humidity: </strong><span>{{ weather.Humidity }}</span>
+        </p>
+        
+    </div>
+</body>
+</html>
